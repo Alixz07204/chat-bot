@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chatbot Simples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="bot-avatar">🤖</div>
+      <div>
+        <h1 class="title">Assistente</h1>
+        <p class="subtitle">Como posso te ajudar hoje?</p>
+      </div>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite" aria-label="Mensagens do chat"></main>
+
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <input
+        id="message-input"
+        class="input"
+        type="text"
+        placeholder="Digite sua mensagem..."
+        required
+        aria-label="Digite sua mensagem"
+      />
+      <button class="send-btn" type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <template id="msg-user">
+    <div class="msg msg-user">
+      <div class="bubble"></div>
+      <span class="time"></span>
+    </div>
+  </template>
+
+  <template id="msg-bot">
+    <div class="msg msg-bot">
+      <div class="bubble"></div>
+      <span class="time"></span>
+    </div>
+  </template>
+
+  <template id="typing">
+    <div class="typing">
+      <span></span><span></span><span></span>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
